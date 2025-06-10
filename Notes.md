@@ -1,6 +1,7 @@
 # Git Global Configuration Notes
 
 ## Configuration Commands
+
 ```bash
 # Set global username
 git config --global user.name "Raza Ali"
@@ -26,7 +27,7 @@ git commit -m "Descriptive commit message"
 # View commit history in compact format
 git log --oneline
 
-# Git reset 
+# Git reset
 git reset --hard HEAD~1
 
 # Show detailed repository status
@@ -52,3 +53,48 @@ git switch -c feature/navbar
 
 # Alternative to switch (legacy command)
 git checkout main
+
+# Start new feature
+git switch -c feature/search
+
+# Develop feature (multiple commits)
+git add .
+git commit -m "Implement search backend"
+
+# Sync with main
+git switch main
+git pull origin main
+git switch feature/search
+git rebase main
+
+# Merge to main
+git switch main
+git merge feature/search
+
+# Create hotfix branch
+git switch -c hotfix/login-issue
+
+# Fix critical bug
+git add .
+git commit -m "Fix login authentication"
+
+# Merge to main and production
+git switch main
+git merge hotfix/login-issue
+git push origin main
+
+# Delete hotfix branch
+git branch -d hotfix/login-issue
+
+# Show merge history
+git log --oneline --graph --all
+
+# Sample output:
+# *   ac76bd1 (HEAD -> main) Merge branch 'feature/navbar'
+# |\
+# | * 4f3a9d7 (feature/navbar) Add mobile menu
+# | * 8b2e1a0 Implement responsive design
+# * | c5d0f3a Update homepage content
+# |/
+# * a1b2c3d Initial commit
+```
