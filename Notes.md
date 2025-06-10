@@ -28,3 +28,16 @@ git log --oneline
 
 # Git reset 
 git reset --hard HEAD~1
+
+# Show detailed repository status
+git status
+
+# Show concise status with change indicators
+git status -s
+
+# View compact commit history
+git log --oneline
+
+# View compact history with branch visualization
+git log --oneline --graph
+
