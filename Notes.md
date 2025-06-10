@@ -41,3 +41,14 @@ git log --oneline
 # View compact history with branch visualization
 git log --oneline --graph
 
+# List all local branches (asterisk indicates current branch)
+git branch
+
+# Switch to existing branch
+git switch main
+
+# Create and switch to new branch
+git switch -c feature/navbar
+
+# Alternative to switch (legacy command)
+git checkout main
