@@ -16,3 +16,15 @@ git config --global core.autocrlf "input"
 
 # Open global config in editor
 git config --global -e
+
+# Stage all changed files in current directory
+git add .
+
+# Commit staged changes with a message
+git commit -m "Descriptive commit message"
+
+# View commit history in compact format
+git log --oneline
+
+# Git reset 
+git reset --hard HEAD~1
