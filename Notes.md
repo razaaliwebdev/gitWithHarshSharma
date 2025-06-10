@@ -98,3 +98,23 @@ git log --oneline --graph --all
 # |/
 # * a1b2c3d Initial commit
 ```
+
+# List all local branches (asterisk indicates current branch)
+
+git branch
+
+# Switch to existing branch
+
+git switch main
+
+# Create and switch to new branch
+
+git switch -c feature/navbar
+
+# Merge branch into current branch
+
+git merge feature/navbar
+
+# Delete merged branch
+
+git branch -d feature/navbar
